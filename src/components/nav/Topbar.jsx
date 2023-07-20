@@ -15,13 +15,12 @@ const Topbar = () => {
    const colorMode = useContext(colorModeContext);
    return (
       <Box
-      width='100%'
-      height='70px'
+         maxWidth="100%"
+         height="70px"
          display="flex"
          justifyContent="flex-end"
          p={2}
          backgroundColor={colors.primary[700]}
-         
       >
          <Box display="flex">
             <IconButton onClick={colorMode.toggleColorMode}>
