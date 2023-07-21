@@ -6,7 +6,7 @@ import {
    useTheme,
    useMediaQuery,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { colorShades } from "../../mui/theme";
 import { Link } from "react-router-dom";
@@ -36,6 +36,7 @@ const NavSidebar = () => {
    const [isCollapsed, setIsCollapsed] = useState(true);
    const tablet = useMediaQuery("(min-width:768px)");
 
+
    useEffect(() => {
       tablet && setIsCollapsed(false);
    }, [tablet]);
@@ -43,6 +44,7 @@ const NavSidebar = () => {
    return (
       <Box
          minHeight="100vh"
+         mb={0}
          sx={{
             userSelect: "none",
             "& .ps-menu-button:hover": {
@@ -55,8 +57,9 @@ const NavSidebar = () => {
          }}
       >
          <Sidebar
-            style={{ height: "100%", border: "none" }}
+            style={{ height: "100%", maxWidth: "100%", border: "none" }}
             collapsed={isCollapsed}
+            collapsedWidth="80px"
             backgroundColor={colors.primary[700]}
          >
             <Box
@@ -126,7 +129,6 @@ const NavSidebar = () => {
                   icon={<TimelineOutlinedIcon fontSize="small" />}
                   title="Line Chart"
                />
-
             </Menu>
          </Sidebar>
       </Box>

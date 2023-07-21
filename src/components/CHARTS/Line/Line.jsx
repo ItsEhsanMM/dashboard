@@ -3,7 +3,7 @@ import { lineData as data } from "../../../fakeDatas/mock";
 import { colorShades } from "../../../mui/theme";
 import { useTheme } from "@mui/material";
 
-const Line = () => {
+const Line = ({ isDashboard }) => {
    const theme = useTheme();
    const colors = colorShades(theme.palette.mode);
 
@@ -48,7 +48,7 @@ const Line = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "transportation",
+            legend: isDashboard ? undefined : "transportation",
             legendOffset: 36,
             legendPosition: "middle",
          }}
@@ -56,7 +56,7 @@ const Line = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "count",
+            legend: isDashboard ? undefined : "count",
             legendOffset: -40,
             legendPosition: "middle",
          }}

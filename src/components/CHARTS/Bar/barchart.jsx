@@ -3,7 +3,7 @@ import { barData as data } from "../../../fakeDatas/mock";
 import { useTheme } from "@mui/material";
 import { colorShades } from "../../../mui/theme";
 
-const Bar = () => {
+const Bar = ({ isDashboard }) => {
    const them = useTheme();
    const colors = colorShades(them.palette.mode);
 
@@ -79,7 +79,7 @@ const Bar = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "country",
+            legend: isDashboard ? undefined : "country",
             legendPosition: "middle",
             legendOffset: 32,
          }}
@@ -87,7 +87,7 @@ const Bar = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "food",
+            legend: isDashboard ? undefined : "food",
             legendPosition: "middle",
             legendOffset: -40,
          }}

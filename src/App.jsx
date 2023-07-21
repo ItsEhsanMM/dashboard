@@ -16,17 +16,19 @@ import Bar from "./components/CHARTS/Bar";
 import Pie from "./components/CHARTS/Pie";
 import Line from "./components/CHARTS/Line";
 
+
 function App() {
    const [colorMode, theme] = useMode();
+
    return (
       <colorModeContext.Provider value={colorMode}>
          <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Box display="flex" maxWidth="100dvw">
+            <Box container display="flex">
                <NavSidebar />
-               <Box display="flex" flexDirection="column" width="100%">
+               <Box display="flex" flexDirection="column" minWidth="10%" width='100%'>
                   <Topbar />
-                  <Box ml={2} mt={8}>
+                  <Box  mt={8}>
                      <Routes>
                         <Route path="/*" element={<Navigate to="/" />} />
                         <Route path="/" element={<Dashboard />} />

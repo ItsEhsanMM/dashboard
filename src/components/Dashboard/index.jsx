@@ -1,11 +1,86 @@
-import React from "react";
+import { colorShades } from "../../mui/theme";
 import Header from "../../shared/Header";
+import { Box, Button, Grid, IconButton, Typography, useTheme } from "@mui/material";
+import StatBox from "./StatBox";
+import Line from "../CHARTS/Line/Line";
+import Bar from "../CHARTS/Bar/barchart";
+import Pie from "../CHARTS/Pie/Pie";
 
 const index = () => {
+   const theme = useTheme();
+   const colors = colorShades(theme.palette.mode);
+
    return (
-      <div>
+      <Box>
          <Header title="dashboard" subtitle="Welcome to Dashboard" />
-      </div>
+         <Box display="flex" justifyContent="space-between" alignItems="center">
+            <Box mb={6} mr={4} width="100%" display="flex" justifyContent="flex-end">
+               <Button
+                  sx={{
+                     bgcolor: colors.primary[400],
+                     color: colors.black[900],
+                     fontSize: "14px",
+                     fontWeight: "bold",
+                     p: "10px 20px",
+                  }}
+               >
+                  Download reports
+               </Button>
+            </Box>
+         </Box>
+         {/* Grid */}
+         <Grid container>
+            {/* row 1 */}
+
+            <Grid item xs={12} md={6} lg={4}>
+               <StatBox
+                  title="12,361"
+                  subtitle="Emails sent"
+                  progress="0.75"
+                  increase="+14%"
+               />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+               <StatBox
+                  title="431,225"
+                  subtitle="sales obtaine"
+                  progress="0.5"
+                  increase="+21%"
+               />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+               <StatBox
+                  title="32,441"
+                  subtitle="New Clients"
+                  progress="0.3"
+                  increase="+14%"
+               />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+               <StatBox
+                  title="1,3325,134"
+                  subtitle="Traffic Inbound"
+                  progress="0.8"
+                  increase="+43%"
+               />
+            </Grid>
+            <Grid item xs={12} lg={12}>
+               <Box height="75vh" maxWidth="100%">
+                  <Line isDashboard={true} />
+               </Box>
+            </Grid>
+            <Grid  item xs={12} lg={6}>
+               <Box height="75vh" maxWidth="100%">
+                  <Bar isDashboard={true} />
+               </Box>
+            </Grid>
+            <Grid  item xs={12} lg={6}>
+               <Box height="75vh" maxWidth="100%">
+                  <Pie />
+               </Box>
+            </Grid>
+         </Grid>
+      </Box>
    );
 };
 
