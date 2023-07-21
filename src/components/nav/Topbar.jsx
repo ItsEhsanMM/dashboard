@@ -20,7 +20,7 @@ const Topbar = () => {
          display="flex"
          justifyContent="flex-end"
          p={2}
-         backgroundColor={colors.primary[700]}
+         backgroundColor={colors.primary[100]}
       >
          <Box display="flex">
             <IconButton onClick={colorMode.toggleColorMode}>

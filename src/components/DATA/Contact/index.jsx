@@ -38,10 +38,7 @@ const Contact = () => {
    ];
    return (
       <Box maxWidth="100%">
-         <Header
-            title="Contact"
-            subtitle="Here you can manage your contacts for feature refrences"
-         />
+         <Header title="Contact" subtitle="Manage your contacts for feature refrences" />
          <Box
             width="100%"
             px={5}
@@ -55,7 +52,16 @@ const Contact = () => {
                },
             }}
          >
-            <Box display="flex" justifyContent="center" alignItems="center">
+            <Box
+               sx={{
+                  "& .MuiButtonBase-root": {
+                     color: colors.black[200],
+                  },
+               }}
+               display="flex"
+               justifyContent="center"
+               alignItems="center"
+            >
                <DataGrid
                   sx={{ maxWidth: "70vw" }}
                   columns={columns}

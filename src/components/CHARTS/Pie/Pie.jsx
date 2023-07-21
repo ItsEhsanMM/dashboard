@@ -28,7 +28,7 @@ const Pie = () => {
             modifiers: [["darker", 0.2]],
          }}
          arcLinkLabelsSkipAngle={10}
-         arcLinkLabelsTextColor={colors.black[100]}
+         arcLinkLabelsTextColor={colors.black[200]}
          arcLinkLabelsThickness={2}
          arcLinkLabelsColor={{ from: "color" }}
          arcLabelsSkipAngle={10}
@@ -66,7 +66,7 @@ const Pie = () => {
                itemsSpacing: 0,
                itemWidth: 100,
                itemHeight: 18,
-               itemTextColor: colors.black[100],
+               itemTextColor: colors.black[200],
                itemDirection: "left-to-right",
                itemOpacity: 1,
                symbolSize: 18,
@@ -75,7 +75,7 @@ const Pie = () => {
                   {
                      on: "hover",
                      style: {
-                        itemTextColor: colors.black[100],
+                        itemTextColor: colors.black[200],
                      },
                   },
                ],

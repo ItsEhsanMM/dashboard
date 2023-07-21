@@ -14,12 +14,12 @@ const Line = ({ isDashboard }) => {
             axis: {
                ticks: {
                   text: {
-                     fill: colors.black[100],
+                     fill: colors.black[200],
                   },
                },
                legend: {
                   text: {
-                     fill: colors.black[100],
+                     fill: colors.black[200],
                      fontWeight: 800,
                      fontSize: 15,
                   },
@@ -27,7 +27,7 @@ const Line = ({ isDashboard }) => {
             },
             legends: {
                text: {
-                  fill: colors.black[100],
+                  fill: colors.black[200],
                },
             },
          }}

@@ -7,13 +7,13 @@ export const colorShades = (mode) => ({
       ? {
            // Dark mode color shades
            primary: {
-              100: "#d2dee4",
-              200: "#a5bdc9",
-              300: "#779daf",
-              400: "#4a7c94",
+              100: "#0B2447",
+              200: "#19376D",
+              300: "#576CBC",
+              400: "#A5D7E8",
               500: "#1d5b79",
-              600: "#174961",
-              700: "#113749",
+              600: "#19376D",
+              700: "#19376D",
               800: "#0c2430",
               900: "#061218",
            },
@@ -29,27 +29,27 @@ export const colorShades = (mode) => ({
               900: "#0e1c1e",
            },
            black: {
-              100: "#d5d8dc",
+              100: "#fff",
               200: "#abb2b9",
               300: "#808b96",
-              400: "#566573",
-              500: "#2c3e50",
+              400: "#A5D7E8",
+              500: "#d2dae2",
               600: "#233240",
               700: "#1a2530",
               800: "#121920",
-              900: "#090c10",
+              900: "#05c46b",
            },
         }
       : {
            // Light mode color shades
            primary: {
-              100: "#061218",
-              200: "#0c2430",
-              300: "#113749",
-              400: "#174961",
+              100: "#1D5D9B",
+              200: "#75C2F6",
+              300: "#F4D160",
+              400: "#FBEEAC",
               500: "#1d5b79",
               700: "#4a7c94",
-              600: "#779daf",
+              600: "#fff",
               800: "#a5bdc9",
               900: "#d2dee4",
            },
@@ -65,7 +65,7 @@ export const colorShades = (mode) => ({
               900: "#dae8ea",
            },
            black: {
-              100: "#090c10",
+              100: "#fff",
               200: "#121920",
               300: "#1a2530",
               400: "#233240",
@@ -73,24 +73,26 @@ export const colorShades = (mode) => ({
               600: "#566573",
               700: "#808b96",
               800: "#abb2b9",
-              900: "#d5d8dc",
+              900: "#05c46b",
            },
         }),
 });
 // Define a function to return theme settings based on the mode
 const themeSetting = (mode) => {
    const colors = colorShades(mode);
-   return {
+   return ({
       palette: {
          mode: mode,
          ...(mode === "dark"
             ? {
                  // Dark mode palette
                  primary: {
-                    main: colors.primary[500],
+                    main: colors.primary[100],
+                    text: colors.primary[300],
                  },
                  secondary: {
-                    main: colors.secondary[500],
+                    main: colors.secondary[200],
+                    text: colors.primary[400],
                  },
                  neutral: {
                     dark: colors.black[800],
@@ -98,16 +100,16 @@ const themeSetting = (mode) => {
                     light: colors.black[400],
                  },
                  background: {
-                    default: colors.primary[900],
+                    default: colors.primary[200],
                  },
               }
             : {
                  // Light mode palette
                  primary: {
-                    main: colors.primary[200],
+                    main: colors.primary[100],
                  },
                  secondary: {
-                    main: colors.secondary[500],
+                    main: colors.secondary[200],
                  },
                  neutral: {
                     dark: colors.black[800],
@@ -122,7 +124,7 @@ const themeSetting = (mode) => {
       typography: {
          fontFamily: ["Nunito", "sans-serif"].join(","),
       },
-   };
+   });
 };
 // Create a context for color mode
 export const colorModeContext = createContext({

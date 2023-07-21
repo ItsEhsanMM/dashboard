@@ -45,12 +45,15 @@ const Team = () => {
    ];
    return (
       <Box maxWidth="100%">
-         <Header title="manage Team" subtitle="Here you can manage your team" />
+         <Header title="manage Team" subtitle="Manage your team" />
          <Box
             width="100%"
             px={5}
             mb={5}
             sx={{
+               "& .MuiButtonBase-root": {
+                  color: colors.black[200],
+               },
                "& .MuiDataGrid-columnHeaders , .MuiDataGrid-footerContainer": {
                   background: colors.primary[700],
                },

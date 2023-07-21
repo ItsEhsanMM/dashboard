@@ -11,12 +11,12 @@ const Header = ({ title, subtitle }) => {
          <Typography
             variant={!mobileSize ? "h4" : "h2"}
             fontWeight={800}
-            color={colors.primary[700]}
+            color={colors.primary[300]}
             mb="5px"
          >
             {title}
          </Typography>
-         <Typography variant="h5" color={colors.secondary[600]}>
+         <Typography variant="h5" color={colors.primary[400]}>
             {subtitle}
          </Typography>
       </Box>

@@ -17,8 +17,11 @@ const index = () => {
             <Box mb={6} mr={4} width="100%" display="flex" justifyContent="flex-end">
                <Button
                   sx={{
-                     bgcolor: colors.primary[400],
-                     color: colors.black[900],
+                     bgcolor: colors.primary[100],
+                     color: colors.black[100],
+                     ":hover": {
+                        bgcolor: colors.primary[300]
+                     },
                      fontSize: "14px",
                      fontWeight: "bold",
                      p: "10px 20px",

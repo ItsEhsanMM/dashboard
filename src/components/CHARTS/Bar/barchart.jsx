@@ -13,22 +13,22 @@ const Bar = ({ isDashboard }) => {
             axis: {
                legend: {
                   text: {
-                     fill: colors.black[100],
+                     fill: colors.black[200],
                      fontSize: 15,
                      fontWeight: 700,
                   },
                },
                ticks: {
                   line: {
-                     stroke: colors.black[100],
+                     stroke: colors.black[200],
                   },
                   text: {
-                     fill: colors.black[100],
+                     fill: colors.black[200],
                   },
                },
                domain: {
                   line: {
-                     stroke: colors.black[100],
+                     stroke: colors.black[200],
                   },
                },
             },

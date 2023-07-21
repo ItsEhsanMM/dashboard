@@ -8,8 +8,9 @@ const ProgressCircle = ({ progress = "0.75", size = "40" }) => {
    return (
       <Box
          sx={{
-            background: `radial-gradient(${colors.primary[400]} 55%, transparent 56%),
-        conic-gradient(transparent 0deg ${angle}deg , ${colors.black[500]} ${angle}deg 360deg)`,
+            background: `radial-gradient(${colors.primary[600]} 55%, transparent 56%),
+        conic-gradient(transparent 0deg ${angle}deg , #05c46b ${angle}deg 360deg),
+        ${colors.black[200]}`,
             width: `${size}px`,
             height: `${size}px`,
             borderRadius: "50%",

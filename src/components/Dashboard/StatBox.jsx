@@ -21,7 +21,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
                   variant="h4"
                   fontWeight="bold"
                   sx={{
-                     color: colors.black[100],
+                     color: colors.black[200],
                   }}
                >
                   {title}
@@ -35,7 +35,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
             <Typography
                variant="h5"
                sx={{
-                  color: colors.black[400],
+                  color: colors.black[200],
                }}
             >
                {subtitle}
@@ -44,7 +44,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
                variant="h5"
                fontStyle="italic"
                sx={{
-                  color: colors.black[600],
+                  color: colors.black[200],
                }}
             >
                {increase}
