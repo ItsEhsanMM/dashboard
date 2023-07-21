@@ -13,6 +13,8 @@ import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import PeopleOutlineOutlinedIcon from "@mui/icons-material/PeopleOutlineOutlined";
 import TrafficOutlinedIcon from "@mui/icons-material/TrafficOutlined";
 
+document.title = "Dashboard";
+
 const index = () => {
    const theme = useTheme();
    const colors = colorShades(theme.palette.mode);
