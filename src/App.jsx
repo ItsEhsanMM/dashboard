@@ -15,6 +15,7 @@ import Contact from "./components/DATA/Contact";
 import Bar from "./components/CHARTS/Bar";
 import Pie from "./components/CHARTS/Pie";
 import Line from "./components/CHARTS/Line";
+import HamburgerMenu from "./components/nav/HamburgurMenu";
 
 function App() {
    const [colorMode, theme] = useMode();
@@ -25,6 +26,7 @@ function App() {
             <CssBaseline />
             <Box container display="flex">
                <NavSidebar />
+               <HamburgerMenu />
                <Box display="flex" flexDirection="column" minWidth="10%" width="100%">
                   <Topbar />
                   <Box mt={8}>
