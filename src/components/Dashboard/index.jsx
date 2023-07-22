@@ -81,19 +81,19 @@ const Dashboard = () => {
                   increase="+43%"
                />
             </Grid>
-            <Grid item xs={12} lg={12} ml={4}>
-               <Box height="75vh" minHeight="10%" maxWidth="90vw">
+            <Grid item xs={12} lg={12}>
+               <Box height="75vh" minHeight="10%">
                   <Line isDashboard={true} />
                </Box>
             </Grid>
-            <Grid item xs={12} lg={6} ml={4}>
-               <Box height="75vh" maxWidth="90vw">
+            <Grid item xs={12} lg={6}>
+               <Box height="75vh">
                   <Bar isDashboard={true} />
                </Box>
             </Grid>
-            <Grid item xs={12} lg={6} ml={4}>
-               <Box height="75vh" maxWidth="90vw">
-                  <Pie />
+            <Grid item xs={12} lg={6}>
+               <Box height="75vh">
+                  <Pie isDashboard={true} />
                </Box>
             </Grid>
          </Grid>

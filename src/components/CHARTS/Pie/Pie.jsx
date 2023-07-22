@@ -2,8 +2,9 @@ import { ResponsivePie } from "@nivo/pie";
 import { pieData as data } from "../../../fakeDatas/mock";
 import { useTheme } from "@mui/material";
 import { colorShades } from "../../../mui/theme";
+import PropTypes from "prop-types";
 
-const Pie = () => {
+const Pie = ({ isDashboard = false }) => {
    const theme = useTheme();
    const colors = colorShades(theme.palette.mode);
    return (
@@ -56,33 +57,41 @@ const Pie = () => {
                spacing: 10,
             },
          ]}
-         legends={[
-            {
-               anchor: "bottom",
-               direction: "row",
-               justify: false,
-               translateX: 0,
-               translateY: 56,
-               itemsSpacing: 0,
-               itemWidth: 100,
-               itemHeight: 18,
-               itemTextColor: colors.black[200],
-               itemDirection: "left-to-right",
-               itemOpacity: 1,
-               symbolSize: 18,
-               symbolShape: "circle",
-               effects: [
-                  {
-                     on: "hover",
-                     style: {
-                        itemTextColor: colors.black[200],
-                     },
-                  },
-               ],
-            },
-         ]}
+         legends={
+            isDashboard
+               ? undefined
+               : [
+                    {
+                       anchor: "bottom",
+                       direction: "row",
+                       justify: false,
+                       translateX: 0,
+                       translateY: 56,
+                       itemsSpacing: 0,
+                       itemWidth: 100,
+                       itemHeight: 18,
+                       itemTextColor: colors.black[200],
+                       itemDirection: "left-to-right",
+                       itemOpacity: 1,
+                       symbolSize: 18,
+                       symbolShape: "circle",
+                       effects: [
+                          {
+                             on: "hover",
+                             style: {
+                                itemTextColor: colors.black[200],
+                             },
+                          },
+                       ],
+                    },
+                 ]
+         }
       />
    );
+};
+
+Pie.propTypes = {
+   isDashboard: PropTypes.bool,
 };
 
 export default Pie;
