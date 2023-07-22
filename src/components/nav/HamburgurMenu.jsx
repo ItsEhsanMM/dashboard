@@ -23,12 +23,13 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 
-const ItemSetting = ({ title, icon, to }) => {
+const ItemSetting = ({ title, icon, to, closeFunc }) => {
    const theme = useTheme();
    const colors = colorShades(theme.palette.mode);
    return (
       <>
          <MenuItem
+            onClick={closeFunc}
             sx={{
                width: "90vw",
                display: "flex",
@@ -70,6 +71,7 @@ ItemSetting.propTypes = {
    title: PropTypes.string,
    icon: PropTypes.element,
    to: PropTypes.string,
+   closeFunc: PropTypes.func,
 };
 
 const items = [
@@ -121,6 +123,7 @@ const HamburgerMenu = () => {
                      title={elem.title}
                      icon={elem.icon}
                      to={elem.to}
+                     closeFunc={handleOpen}
                   />
                ))}
             </Menu>
