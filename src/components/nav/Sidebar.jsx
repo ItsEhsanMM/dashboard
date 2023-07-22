@@ -53,7 +53,7 @@ const NavSidebar = () => {
    return (
       <Box
          minHeight="100vh"
-         mb={0}
+         display={tablet ? "flex" : "none"}
          sx={{
             userSelect: "none",
             "& .ps-menu-button:hover": {

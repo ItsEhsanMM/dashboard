@@ -82,7 +82,7 @@ const Dashboard = () => {
                />
             </Grid>
             <Grid item xs={12} lg={12}>
-               <Box height="75vh" maxWidth="100%">
+               <Box height="75vh" minHeight="10%" maxWidth="100%">
                   <Line isDashboard={true} />
                </Box>
             </Grid>

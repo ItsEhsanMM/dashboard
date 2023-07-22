@@ -1,4 +1,4 @@
-import { Box, useTheme, Typography } from "@mui/material";
+import { Box, useTheme, Typography, useMediaQuery } from "@mui/material";
 import { colorShades } from "../../mui/theme";
 import ProgressCircle from "./progressCircle";
 import PropTypes from "prop-types";
@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 const StatBox = ({ title, subtitle, icon, progress, increase }) => {
    const theme = useTheme();
    const colors = colorShades(theme.palette.mode);
+   const mobileSize = useMediaQuery("(min-width:468px)");
 
    return (
       <Box
@@ -19,7 +20,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
             <Box display="flex" gap={1} alignItems="center">
                {icon}
                <Typography
-                  variant="h4"
+                  variant={mobileSize ? "h4" : "h6"}
                   fontWeight="bold"
                   sx={{
                      color: colors.black[200],
@@ -34,7 +35,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
          </Box>
          <Box display="flex" justifyContent="space-around">
             <Typography
-               variant="h5"
+               variant={mobileSize ? "h5" : "h6"}
                sx={{
                   color: colors.black[200],
                }}
@@ -42,7 +43,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
                {subtitle}
             </Typography>
             <Typography
-               variant="h5"
+               variant={mobileSize ? "h5" : "h6"}
                fontStyle="italic"
                sx={{
                   color: colors.black[200],
