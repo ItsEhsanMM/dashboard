@@ -7,7 +7,7 @@ const index = () => {
       <Box ml={4} mb={4} maxWidth="95%">
          <Header title="Line Chart" subtitle="Simple line chart" />
 
-         <Box height="75vh">
+         <Box height="75vh" maxWidth="90vw">
             <Line />
          </Box>
       </Box>
