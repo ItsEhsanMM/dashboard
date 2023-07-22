@@ -2,6 +2,7 @@ import { ResponsiveLine } from "@nivo/line";
 import { lineData as data } from "../../../fakeDatas/mock";
 import { colorShades } from "../../../mui/theme";
 import { useTheme } from "@mui/material";
+import PropTypes from "prop-types";
 
 const Line = ({ isDashboard }) => {
    const theme = useTheme();
@@ -97,4 +98,9 @@ const Line = ({ isDashboard }) => {
       />
    );
 };
+
+Line.propTypes = {
+   isDashboard: PropTypes.bool,
+};
+
 export default Line;

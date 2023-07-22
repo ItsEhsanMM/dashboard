@@ -15,7 +15,7 @@ import TrafficOutlinedIcon from "@mui/icons-material/TrafficOutlined";
 
 document.title = "Dashboard";
 
-const index = () => {
+const Dashboard = () => {
    const theme = useTheme();
    const colors = colorShades(theme.palette.mode);
 
@@ -101,4 +101,4 @@ const index = () => {
    );
 };
 
-export default index;
+export default Dashboard;

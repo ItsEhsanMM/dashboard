@@ -6,10 +6,11 @@ import {
    useTheme,
    useMediaQuery,
 } from "@mui/material";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { colorShades } from "../../mui/theme";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
 //icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -28,6 +29,14 @@ const Item = ({ title, icon, to, color, className }) => {
          </MenuItem>
       </Link>
    );
+};
+
+Item.propTypes = {
+   title: PropTypes.string.isRequired,
+   icon: PropTypes.element.isRequired,
+   to: PropTypes.string.isRequired,
+   color: PropTypes.string.isRequired,
+   className: PropTypes.any,
 };
 
 const NavSidebar = () => {

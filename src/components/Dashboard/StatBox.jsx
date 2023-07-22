@@ -1,6 +1,7 @@
 import { Box, useTheme, Typography } from "@mui/material";
 import { colorShades } from "../../mui/theme";
 import ProgressCircle from "./progressCircle";
+import PropTypes from "prop-types";
 
 const StatBox = ({ title, subtitle, icon, progress, increase }) => {
    const theme = useTheme();
@@ -15,7 +16,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
          m="10px 30px"
       >
          <Box display="flex" justifyContent="space-around">
-            <Box display='flex' gap={1} alignItems='center'>
+            <Box display="flex" gap={1} alignItems="center">
                {icon}
                <Typography
                   variant="h4"
@@ -52,6 +53,14 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
          </Box>
       </Box>
    );
+};
+
+StatBox.propTypes = {
+   title: PropTypes.string,
+   subtitle: PropTypes.string,
+   icon: PropTypes.element,
+   increase: PropTypes.string,
+   progress: PropTypes.string,
 };
 
 export default StatBox;

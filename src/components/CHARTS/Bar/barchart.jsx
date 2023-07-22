@@ -2,6 +2,7 @@ import { ResponsiveBar } from "@nivo/bar";
 import { barData as data } from "../../../fakeDatas/mock";
 import { useTheme } from "@mui/material";
 import { colorShades } from "../../../mui/theme";
+import PropTypes from "prop-types";
 
 const Bar = ({ isDashboard }) => {
    const them = useTheme();
@@ -128,6 +129,10 @@ const Bar = ({ isDashboard }) => {
          }
       />
    );
+};
+
+Bar.propTypes = {
+   isDashboard: PropTypes.bool,
 };
 
 export default Bar;

@@ -1,5 +1,6 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { colorShades } from "../mui/theme";
+import PropTypes from "prop-types";
 
 const Header = ({ title, subtitle }) => {
    const theme = useTheme();
@@ -21,6 +22,11 @@ const Header = ({ title, subtitle }) => {
          </Typography>
       </Box>
    );
+};
+
+Header.propTypes = {
+   title: PropTypes.string.isRequired,
+   subtitle: PropTypes.string.isRequired,
 };
 
 export default Header;
