@@ -57,7 +57,7 @@ const Dashboard = () => {
             <Grid item xs={12} md={6} lg={4}>
                <StatBox
                   title="431,225"
-                  subtitle="sales obtaine"
+                  subtitle="sales obtained"
                   icon={<AttachMoneyOutlinedIcon fontSize="large" />}
                   progress="0.5"
                   increase="+21%"
